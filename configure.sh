@@ -11,15 +11,15 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     "settings": {
       "clients": [
         {
-          "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
-          "alterId": 64       
+          "id": "c83962fc-04c4-4e90-86a5-6d1208e0cc53",
+          "alterId": 3       
         }
       ]
     },
     "streamSettings": {
       "network": "ws",
       "wsSettings": {
-      "path": "/ws"
+      "path": "/w2s"
       }     
     }
   }
