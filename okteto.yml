@@ -4,7 +4,7 @@ kind: Deployment
 
 metadata:
 
-  name: v2ws
+  name: debian
 
 spec:
 
@@ -14,7 +14,7 @@ spec:
 
     matchLabels:
 
-      app: v2ws
+      app: debian
 
   template:
 
@@ -22,15 +22,15 @@ spec:
 
       labels:
 
-        app: v2ws
+        app: debian
 
     spec:
 
       containers:
 
-      - image: byxiaopeng/v2tls-docker
+      - image: itscaro/debian-ssh 
 
-        name: v2ws
+        name: debian
 
 ---
 
@@ -40,7 +40,7 @@ kind: Service
 
 metadata:
 
-  name: v2ws
+  name: debian
 
   annotations:
 
@@ -58,5 +58,5 @@ spec:
 
   selector:
 
-    app: v2ws
+    app: debian
 
