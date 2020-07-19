@@ -1,62 +1,32 @@
-apiVersion: apps/v1
-
+apiVersion: apps/v1 
 kind: Deployment
-
 metadata:
-
-  name: debian
-
+ name: debian
 spec:
-
-  replicas: 1
-
-  selector:
-
+ replicas: 1
+ selector:
     matchLabels:
-
       app: debian
-
   template:
-
-    metadata:
-
+   metadata:
       labels:
-
         app: debian
-
     spec:
-
       containers:
-
       - image: itscaro/debian-ssh 
-
         name: debian
-
 ---
-
 apiVersion: v1
-
 kind: Service
-
 metadata:
-
   name: debian
-
   annotations:
-
     dev.okteto.com/auto-ingress: "true"
-
 spec:
-
   type: ClusterIP  
-
   ports:
-
   - name: "http-port-tcp"
-
     port: 80
-
-  selector:
-
+ selector:
     app: debian
 
