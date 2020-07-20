@@ -6,7 +6,9 @@ spec:
  replicas: 1
  selector:
    matchLabels:
-     app: debian
+      app: debian
+      tier: backend
+      track: stable
   template:
    metadata:
       labels:
