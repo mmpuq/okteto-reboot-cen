@@ -8,7 +8,7 @@ spec:
    matchLabels:
       app: debian
       tier: backend
-      track: stable
+       track: stable
   template:
    metadata:
       labels:
