@@ -7,7 +7,7 @@ spec:
  selector:
    matchLabels:
       app: debian
-      tier: backend
+      tier:
   template:
    metadata:
       labels:
